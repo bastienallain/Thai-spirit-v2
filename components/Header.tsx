@@ -57,39 +57,41 @@ const Header = () => {
               {link.title}
             </Link>
           ))}
-        {Object.keys(cities).map((city, index) => (
-          <div key={index} className="relative inline-block text-left">
-            <button
-              onClick={() => setOpenCity(openCity === city ? null : city)}
-              type="button"
-              className="inline-flex justify-center w-full rounded-md bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
-            >
-              {city}
-            </button>
-            {openCity === city && (
-              <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                <div
-                  className="py-1"
-                  role="menu"
-                  aria-orientation="vertical"
-                  aria-labelledby="options-menu"
-                >
-                  {cities[city].map((data, i) => (
-                    <a
-                      key={i}
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                      role="menuitem"
-                    >
-                      {data.area}
-                    </a>
-                  ))}
-                  {/* Vous pouvez ajouter ici un autre dropdown pour la catégorie si nécessaire */}
+        <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
+          {Object.keys(cities).map((city, index) => (
+            <div key={index} className="relative inline-block text-left">
+              <button
+                onClick={() => setOpenCity(openCity === city ? null : city)}
+                type="button"
+                className="inline-flex justify-center w-full rounded-md bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+              >
+                {city}
+              </button>
+              {openCity === city && (
+                <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                  <div
+                    className="py-1"
+                    role="menu"
+                    aria-orientation="vertical"
+                    aria-labelledby="options-menu"
+                  >
+                    {cities[city].map((data, i) => (
+                      <a
+                        key={i}
+                        href="#"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                        role="menuitem"
+                      >
+                        {data.area}
+                      </a>
+                    ))}
+                    {/* Vous pouvez ajouter ici un autre dropdown pour la catégorie si nécessaire */}
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
-        ))}
+              )}
+            </div>
+          ))}
+        </div>
         <SearchButton />
         <ThemeSwitch />
         <MobileNav />
