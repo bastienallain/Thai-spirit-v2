@@ -15,7 +15,7 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <div className="mr-3">
               <Image
-                src="/static/images/Thai-spirit.svg"
+                src="/static/images/logo.png"
                 width={80}
                 height={80}
                 alt="thai spirit travel guide"
