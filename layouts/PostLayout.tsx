@@ -51,7 +51,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                 </div>
               </dl>
               <Image
-                src={content.thumbnail?.[0] || '/static/images/Thai-spirit.png'}
+                src={content.cover?.[0] || '/static/images/Thai-spirit.png'}
                 className="object-cover w-full h-64"
                 alt=""
                 width={900}
