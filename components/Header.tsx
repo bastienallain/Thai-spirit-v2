@@ -5,18 +5,24 @@ import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
+import Image from 'next/image'
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between py-10">
-      <div>
+    <header className="flex items-center justify-between py-4 w-full fixed top-0 left-0 right-0 bg-white dark:bg-black z-50 container mx-auto">
+      <div className="">
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
             <div className="mr-3">
-              <Logo />
+              <Image
+                src="/static/images/Thai-spirit.svg"
+                width={80}
+                height={80}
+                alt="thai spirit travel guide"
+              />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block">
+              <div className="hidden h-6 text-2xl font-semibold sm:block  text-black dark:text-white ">
                 {siteMetadata.headerTitle}
               </div>
             ) : (

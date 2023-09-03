@@ -50,6 +50,14 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                   </dd>
                 </div>
               </dl>
+              <Image
+                src={content.thumbnail?.[0] || '/static/images/Thai-spirit.png'}
+                className="object-cover w-full h-64"
+                alt=""
+                width={900}
+                height={900}
+              />
+
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>

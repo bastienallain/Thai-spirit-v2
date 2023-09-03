@@ -1,6 +1,6 @@
 import 'css/prism.css'
 import 'katex/dist/katex.css'
-import { useEffect } from 'react'
+
 import PageTitle from '@/components/PageTitle'
 import { components } from '@/components/MDXComponents'
 import { MDXLayoutRenderer } from 'pliny/mdx-components'
@@ -89,7 +89,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
 
   if (postIndex === -1) {
     return (
-      <>
+      <div>
         <LanguageSetter language={language} />
         <div className="mt-24 text-center">
           <PageTitle>
@@ -99,7 +99,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
             </span>
           </PageTitle>
         </div>
-      </>
+      </div>
     )
   }
   const prev = sortedCoreContents[postIndex + 1]
