@@ -9,17 +9,13 @@ const MAX_DISPLAY = 9
 export default function Home({ posts }) {
   return (
     <>
-      <div className="relative px-4 pt-32 mx-auto lg:py-32 md:px-8 xl:px-20 sm:max-w-xl md:max-w-full">
+      <div className="relative px-4 pt-32 mx-auto lg:py-32  sm:max-w-xl md:max-w-full">
         <div className="max-w-xl mx-auto lg:max-w-screen-xl">
           <div className="mb-16 lg:max-w-lg lg:mb-0">
             <div className="max-w-xl mb-6">
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight  sm:text-4xl sm:leading-none">
-                Discover the Hidden Gems
-                <br className="hidden md:block" />
-                of Thailand
-                <span className="inline-block text-deep-purple-accent-400">
-                  From Bangkok to Phuket
-                </span>
+                Discover the Hidden Gems of Thailand
+                <span className="inline-block text-primary-500">From Bangkok to Phuket</span>
               </h2>
               <p className="text-base  md:text-lg">
                 Welcome to Thai Spirit , your go-to resource for exploring Thailand's most

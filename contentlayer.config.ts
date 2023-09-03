@@ -94,6 +94,9 @@ export const Blog = defineDocumentType(() => ({
     bibliography: { type: 'string' },
     canonicalUrl: { type: 'string' },
     language: { type: 'string', default: 'en-US' },
+    city: { type: 'string', required: true },
+    area: { type: 'string', required: true },
+    category: { type: 'string', required: true },
   },
   computedFields: {
     ...computedFields,
