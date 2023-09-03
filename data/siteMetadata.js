@@ -1,15 +1,16 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
+  title: 'Thai Spirit: Your Ultimate Guide to Travel and Nightlife in Thailand',
+  author: 'Thai Spirit Team',
   headerTitle: 'Thai Spirit',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description:
+    'Explore the best of Thailand’s travel destinations and vibrant nightlife with Thai Spirit. From bustling Bangkok to serene beaches, we cover it all.',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
+  siteUrl: 'https://thai-spirit.com',
   siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
   siteLogo: '/static/images/Thai-spirit.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/Thai-spirit.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'contact@thai-spirit.com',
   github: 'https://github.com',

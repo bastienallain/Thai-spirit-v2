@@ -3,8 +3,8 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
-
-const MAX_DISPLAY = 10
+import Image from 'next/image'
+const MAX_DISPLAY = 9
 
 export default function Home({ posts }) {
   return (
@@ -49,66 +49,60 @@ export default function Home({ posts }) {
           />
         </div>
       </div>
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+      <div className="divide-y ">
+        <div className="space-y-2 pb-8 pt-6 md:space-y-5 text-center">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 ">
             Thailand travel Guide
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             {siteMetadata.description}
           </p>
         </div>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((post) => {
-            const { slug, date, title, summary, tags } = post
-            return (
-              <li key={slug} className="py-12">
-                <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                    <dl>
-                      <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                        <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
-                      </dd>
-                    </dl>
-                    <div className="space-y-5 xl:col-span-3">
-                      <div className="space-y-6">
-                        <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="text-gray-900 dark:text-gray-100"
-                            >
-                              {title}
-                            </Link>
-                          </h2>
-                          <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
-                        </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                          {summary}
-                        </div>
-                      </div>
-                      <div className="text-base font-medium leading-6">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-                          aria-label={`Read "${title}"`}
-                        >
-                          Read more &rarr;
-                        </Link>
-                      </div>
-                    </div>
+        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+          <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
+            {!posts.length && 'No posts found.'}
+            {posts.slice(0, MAX_DISPLAY).map((post) => {
+              const { slug, date, title, summary, tags, thumbnail } = post
+              return (
+                <div
+                  key={slug}
+                  className="overflow-hidden transition-shadow duration-300 bg-white dark:bg-black rounded shadow-sm "
+                >
+                  <Image
+                    src={thumbnail?.[0] || '/static/images/Thai-spirit.png'}
+                    className="object-cover w-full h-64"
+                    alt=""
+                    width={900}
+                    height={900}
+                  />
+                  <div className="p-5 border border-t-0 dark:border-gray-700">
+                    <p className="mb-3 text-xs font-semibold tracking-wide uppercase text-black dark:text-white">
+                      {tags.map((tag) => (
+                        <Tag key={tag} text={tag} />
+                      ))}
+                      <span className="text-gray-600 dark:text-gray-400">
+                        — <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                      </span>
+                    </p>
+                    <Link
+                      href={`/blog/${slug}`}
+                      className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 text-black dark:text-white hover:text-deep-purple-accent-700 dark:hover:text-deep-purple-400"
+                    >
+                      {title}
+                    </Link>
+                    <p className="mb-2 text-gray-700 dark:text-gray-300">{summary}</p>
+                    <Link
+                      href={`/blog/${slug}`}
+                      className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800 dark:hover:text-deep-purple-200"
+                    >
+                      Read more &rarr;
+                    </Link>
                   </div>
-                </article>
-              </li>
-            )
-          })}
-        </ul>
+                </div>
+              )
+            })}
+          </div>
+        </div>
       </div>
       {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
