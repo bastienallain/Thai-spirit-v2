@@ -14,30 +14,35 @@ export default function Home({ posts }) {
           <div className="mb-16 lg:max-w-lg lg:mb-0">
             <div className="max-w-xl mb-6">
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight  sm:text-4xl sm:leading-none">
-                The quick, brown fox
+                Discover the Hidden Gems
                 <br className="hidden md:block" />
-                jumps over{' '}
-                <span className="inline-block text-deep-purple-accent-400">a lazy dog</span>
+                of Thailand
+                <span className="inline-block text-deep-purple-accent-400">
+                  From Bangkok to Phuket
+                </span>
               </h2>
               <p className="text-base  md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.
+                Welcome to Thai Spirit , your go-to resource for exploring Thailand's most
+                captivating destinations. Whether you're an adventurer, a foodie, or a beach bum,
+                we've got something for everyone. From the bustling streets of Bangkok to the serene
+                beaches of Phuket, let us guide you through an unforgettable journey in this
+                tropical paradise.
               </p>
             </div>
             <div className="flex items-center">
-              <a
-                href="/"
-                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-black dark:text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+              <Link
+                href="/blog"
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-black hover:text-white dark:text-white bg-white dark:bg-slate-900 transition duration-200 rounded shadow-md hover:bg-primary-600 focus:shadow-outline focus:outline-none dark:hover:bg-neutral-800 dark:hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] dark:focus:bg-neutral-800 dark:focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] dark:active:bg-neutral-900 dark:active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)]"
               >
-                Get started
-              </a>
-              <a
+                Our Blog
+              </Link>
+              <Link
                 href="/"
                 aria-label=""
-                className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                className="ml-4 inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
               >
-                Learn more
-              </a>
+                Our Pricing
+              </Link>
             </div>
           </div>
         </div>
