@@ -8,6 +8,7 @@ import SearchButton from './SearchButton'
 import Image from 'next/image'
 import { useMenuData } from './MenuDataContext'
 import { useState } from 'react'
+import { MenuData } from './MenuDataContext'
 const Header = () => {
   const { menuData } = useMenuData()
   const [openCity, setOpenCity] = useState<string | null>(null)

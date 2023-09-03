@@ -1,12 +1,11 @@
 'use client'
 import React, { createContext, useContext, useState, ReactNode } from 'react'
 
-interface MenuData {
+export interface MenuData {
   city: string
   area: string
   category: string
 }
-
 interface MenuDataContextProps {
   menuData: MenuData[]
   setMenuData: React.Dispatch<React.SetStateAction<MenuData[]>>
