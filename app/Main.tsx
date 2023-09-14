@@ -52,6 +52,152 @@ export default function Home({ posts }) {
           />
         </div>
       </div>
+      <div className=" py-3 sm:py-4 lg:py-6">
+        <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+          {/* text - start */}
+          <div className="mb-10 md:mb-16">
+            <h2 className="mb-4 text-center text-2xl font-bold text-gray-900 dark:text-gray-100 md:mb-6 lg:text-3xl">
+              Our Destination
+            </h2>
+            <p className="mx-auto max-w-screen-md text-center text-gray-200 dark:text-gray-200 md:text-lg">
+              This is a section of some simple filler text, also known as placeholder text. It
+              shares some characteristics of a real written text but is random or otherwise
+              generated.
+            </p>
+          </div>
+          {/* text - end */}
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {/* product - start */}
+            <div>
+              <Link
+                href="/bangkok"
+                className="group relative block h-96 overflow-hidden rounded-t-lg bg-gray-100"
+              >
+                <Image
+                  src="/static/images/home/bangkok-card.webp"
+                  alt=""
+                  width={900}
+                  height={1350}
+                  loading="lazy"
+                  className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                />
+              </Link>
+              <div className="flex items-start justify-between gap-2 rounded-b-lg bg-gray-100 p-4">
+                <div className="flex flex-col">
+                  <Link
+                    href="/bangkok"
+                    className="font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-lg"
+                  >
+                    Bangkok
+                    <br />
+                    <span className="text-sm text-gray-500 lg:text-base">
+                      The pulsating heart of Thailand, welcomes you to explore its vibrant street
+                      markets, grandiose temples, and bustling nightlife.
+                    </span>
+                    <br /> <span className="text-sm text-grey-800 lg:text-base">Read More</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <Link
+                href="/phuket"
+                className="group relative block h-96 overflow-hidden rounded-t-lg bg-gray-100"
+              >
+                <Image
+                  src="/static/images/home/phuket-card.webp"
+                  alt=""
+                  width={900}
+                  height={1350}
+                  loading="lazy"
+                  className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                />
+              </Link>
+              <div className="flex items-start justify-between gap-2 rounded-b-lg bg-gray-100 p-4">
+                <div className="flex flex-col">
+                  <Link
+                    href="/phuket"
+                    className="font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-lg"
+                  >
+                    Phuket
+                    <br />
+                    <span className="text-sm text-gray-500 lg:text-base">
+                      the jewel of the Andaman Sea, invites you to discover its paradisiacal
+                      beaches, colorful markets, and vibrant nightlife.
+                    </span>
+                    <br /> <span className="text-sm text-grey-800 lg:text-base">Read More</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div>
+              <Link
+                href="/pattaya"
+                className="group relative block h-96 overflow-hidden rounded-t-lg bg-gray-100"
+              >
+                <Image
+                  src="/static/images/home/pattaya-card.webp"
+                  alt=""
+                  width={900}
+                  height={1350}
+                  loading="lazy"
+                  className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                />
+              </Link>
+              <div className="flex items-start justify-between gap-2 rounded-b-lg bg-gray-100 p-4">
+                <div className="flex flex-col">
+                  <Link
+                    href="/pattaya"
+                    className="font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-lg"
+                  >
+                    Pattaya
+                    <br />
+                    <span className="text-sm text-gray-500 lg:text-base">
+                      a vibrant city that harmoniously blends the modern with the traditional,
+                      invites you to explore its pristine beaches, bustling markets, and
+                      electrifying nightlife.
+                    </span>
+                    <br /> <span className="text-sm text-grey-800 lg:text-base">Read More</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div>
+              <Link
+                href="/chiang-mai"
+                className="group relative block h-96 overflow-hidden rounded-t-lg bg-gray-100"
+              >
+                <Image
+                  src="/static/images/home/chiang-mai-card.webp"
+                  alt=""
+                  width={900}
+                  height={1350}
+                  loading="lazy"
+                  className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                />
+              </Link>
+              <div className="flex items-start justify-between gap-2 rounded-b-lg bg-gray-100 p-4">
+                <div className="flex flex-col">
+                  <Link
+                    href="/chiang-mai"
+                    className="font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-lg"
+                  >
+                    Chiang Mai
+                    <br />
+                    <span className="text-sm text-gray-500 lg:text-base">
+                      the rose of Northern Thailand, beckons you to explore its ancient temples,
+                      vibrant markets, and tranquil mountains.
+                    </span>
+                    <br /> <span className="text-sm text-grey-800 lg:text-base">Read More</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="divide-y ">
         <div className="space-y-2 pb-8 pt-6 md:space-y-5 text-center">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 ">
@@ -107,6 +253,7 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
+
       {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
           <Link
